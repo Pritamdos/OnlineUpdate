@@ -1,0 +1,274 @@
+#modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  transform: scale(0);
+  z-index: 1;
+}
+#modal-container.one {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one .modal-background .modal {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; 
+}
+#modal-container.one.out .modal-background .modal {
+ animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; 
+}
+
+#modal-container .modal-background 
+{
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  vertical-align: middle;
+  position:relative;
+}
+#modal-container .modal-background .modal {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container .modal-background .modal h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container .modal-background .modal p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.modal{
+	width: 30%;
+	height: 75%;
+	margin-top: 80px;
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+body
+{
+  margin:0;
+  padding:0;
+}
+a.closed {
+    position: absolute;
+    right: 7px;
+    top: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.pulse-button1 {
+    position: relative;
+    width: 190px;
+    height: 55px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background: #169031c7;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.pulse-button2 {
+    position: relative;
+    width: 190px;
+    height: 55px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background: #169031c7;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.pulse-button3 {
+  position: relative;
+  width: 190px;
+  height: 55px;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  background-color: #169031c7;
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.pulse-button4 {
+  position: relative;
+  width: 230px;
+  height: 55px;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  background-image: url('./../images/order_now4.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.pulse-button5 {
+  position: relative;
+  width: 230px;
+  height: 55px;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  background-color: #666;
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.button_ord {
+  width: 110px;
+  height: 18px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: green;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button_neword {
+  width: 190px;
+  height: 55px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #169031c7;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  cursor: pointer;
+}
+
+.button_ord:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.button_neword:hover {
+  background-color: #169031c7;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+.offer-img {
+  position: relative;
+  width: 80px;
+  height: 24px;
+  margin-top:2px;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  background-color: green;
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.offer-img : hover {
+	background-color: red;
+}
+
+.pulse-button1:hover 
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none; 
+}
+
+.pulse-button2:hover 
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none; 
+}
+
+.pulse-button3:hover 
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none; 
+}
+
+.pulse-button4:hover 
+{
+ -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none; 
+}
+
+.button_neword:hover 
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none; 
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
